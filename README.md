@@ -16,7 +16,7 @@
 * Service
   * In this Application 4 Serivce class AddressSerivce,ProductSerivce,OrderSerivce and UserSerivce.
 * Repository
-  * In this Application two Repository class AddressRepo,ProductRepo,OrderRepo and UserRepo.
+  * In this Application 4 Repository class AddressRepo,ProductRepo,OrderRepo and UserRepo.
 * Database
   * I used mysql Database In this Application And Created data.sql file to upload data in table at the start of Application.
 * Util Class
