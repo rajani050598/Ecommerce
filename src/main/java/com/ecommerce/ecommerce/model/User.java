@@ -11,14 +11,15 @@ import java.util.List;
 @Entity
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long userId;
     private String userName;
     private String userEmail;
     private String userPassword;
     private String userContact;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+   // @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    @OneToMany
     private List<Address> userAddresses;
 
 }

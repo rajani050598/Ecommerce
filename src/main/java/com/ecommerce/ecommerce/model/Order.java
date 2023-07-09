@@ -13,18 +13,21 @@ import java.util.List;
 @Entity
 public class Order {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long orderId;
     private Integer productCountNumber;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+   // @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private User orderUser;
 
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    //@ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Product orderProduct;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    //@ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Address orderAddress;
 
 }

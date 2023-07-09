@@ -1,15 +1,11 @@
 package com.ecommerce.ecommerce.controller;
 
-import com.ecommerce.ecommerce.model.Address;
-import com.ecommerce.ecommerce.model.Category;
 import com.ecommerce.ecommerce.model.Product;
-import com.ecommerce.ecommerce.service.AddressService;
 import com.ecommerce.ecommerce.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("api/product")

@@ -13,7 +13,7 @@ import java.util.List;
 @Entity
 public class Address {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long addressId;
     private String addressName;
     private String addressLandmark;
@@ -21,7 +21,8 @@ public class Address {
     private String zipCode;
     private String addressState;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    //@ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private User user;
 
 }

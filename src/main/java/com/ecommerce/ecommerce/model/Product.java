@@ -1,5 +1,4 @@
 package com.ecommerce.ecommerce.model;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,12 +13,12 @@ import lombok.NoArgsConstructor;
 
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long productId;
     private String productName;
     private Double productPrice;
     private String productDescription;
-    private Category productCategory;
+    private String productCategory;
     private String productBrand;
 
 }

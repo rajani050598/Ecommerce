@@ -1,13 +1,11 @@
 package com.ecommerce.ecommerce.service;
 import com.ecommerce.ecommerce.Repo.ProductRepo;
-import com.ecommerce.ecommerce.model.Category;
 import com.ecommerce.ecommerce.model.Order;
 import com.ecommerce.ecommerce.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.ArrayList;
+
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 @Service
