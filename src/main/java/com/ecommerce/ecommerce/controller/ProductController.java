@@ -1,7 +1,9 @@
 package com.ecommerce.ecommerce.controller;
 
+import com.ecommerce.ecommerce.model.Address;
 import com.ecommerce.ecommerce.model.Category;
 import com.ecommerce.ecommerce.model.Product;
+import com.ecommerce.ecommerce.service.AddressService;
 import com.ecommerce.ecommerce.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -10,48 +12,28 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("api/product")
 public class ProductController {
     @Autowired
-    ProductService productService;
-
-    //get all products
-    @GetMapping("products")
-    public Map<Integer, Product> getpruducts(){
-        return productService.getallproducts();
-    }
-
-    //get all products below a particular price range
-    @GetMapping("products/prices/{price}")
-    public List<Product> getProductsBelowPrice(@PathVariable Double price){
-        return  productService.getproductsbelowrange(price);
+   ProductService productService;
+    @GetMapping("getAll")
+    public List<Product> getAllproduct(){
+        return  productService.getallproducts();
 
     }
-    //get all products belonging to a particular category
-    @GetMapping("products/category/{category}")
-    public List<Product> getproductsByCategory(@PathVariable Category category)
-    {
-        return productService.getProductsByCategory(category);
+    @GetMapping("getbyid/{Id}")
+    public Product getproductById(@PathVariable Long Id){
+        return productService.getproductById(Id);
+
+    }
+    @PostMapping("addproduct")
+    public  String addproduct(@RequestBody Product product){
+        return productService.addProduct(product);
+    }
+    @DeleteMapping("delete/{Id}")
+    public String deleteById(@PathVariable Long Id){
+        return productService.deleteById(Id);
     }
 
-    //add products
-    @PostMapping("products")
-    public  String addproducts(@RequestBody List<Product> products)
-    {
-        return  productService.addproducts(products);
-    }
-    //remove a particular product based on product id
-
-    @DeleteMapping("products/delete/{proId}")
-    public String deleteproductById(@PathVariable Integer proId){
-        return productService.deleteproductById(proId);
-    }
-
-    //update price of products based on some discount
-    @PutMapping("products/discount/{percentagediscount}")
-    public String updateProductByDiscount(@PathVariable Integer percentagediscount)
-    {
-        return productService.updateProductByDiscount(percentagediscount);
-    }
 
 }
