@@ -36,27 +36,27 @@ Ecommerce API application is RESTAPI Application in this you can fetch the data 
 ### links of Mappings and endpoints.
 
     addAddress/addProduct/addOrder/addUser
-        PostMapping- http://localhost:8080/api/address/addone
-        PostMapping- http://localhost:8080/api/employee/addone
-        PostMapping- http://localhost:8080/api/address/addone
-        PostMapping- http://localhost:8080/api/employee/addone
+        PostMapping- http://localhost:8080/api/address/addaddress
+        PostMapping- http://localhost:8080/api/order/addorder
+        PostMapping- http://localhost:8080/api/product/addproduct
+        PostMapping- http://localhost:8080/api/user/adduser
      
     Get Address by Id / Get Product by Id/ Get Order by Id / Get User by Id
-        GetMapping- http://localhost:8080/api/address/getbyId/8
-        GetMapping- http://localhost:8080/api/employee/getbyId/1
-        GetMapping- http://localhost:8080/api/address/getbyId/8
-        GetMapping- http://localhost:8080/api/employee/getbyId/1
+        GetMapping- http://localhost:8080/api/address/getbyid/1
+        GetMapping- http://localhost:8080/api/order/getbyid/1
+        GetMapping- http://localhost:8080/api/product/getbyId/1
+        GetMapping- http://localhost:8080/api/user/getbyId/1
     
     Get all Address/ Get all Products/Get all Orders/ Get all Users
-        GetMapping- http://localhost:8080/api/address/getall
-        GetMapping- http://localhost:8080/api/employee/getall
-        GetMapping- http://localhost:8080/api/address/getall
-        GetMapping- http://localhost:8080/api/employee/getall
+        GetMapping- http://localhost:8080/api/address/getAll
+        GetMapping- http://localhost:8080/api/order/getAll
+        GetMapping- http://localhost:8080/api/product/getAll
+        GetMapping- http://localhost:8080/api/user/getAll
     
     
     deleteAddress/deleteUser/deleteProduct/deleteOrder
-       DeleteMapping- http://localhost:8080/api/address/delete/10
-       DeleteMapping- http://localhost:8080/api/employee/delete/5
-       DeleteMapping- http://localhost:8080/api/address/delete/10
-       DeleteMapping- http://localhost:8080/api/employee/delete/5
+       DeleteMapping- http://localhost:8080/api/address/delete/1
+       DeleteMapping- http://localhost:8080/api/order/delete/1
+       DeleteMapping- http://localhost:8080/api/product/delete/1
+       DeleteMapping- http://localhost:8080/api/user/delete/1
       
